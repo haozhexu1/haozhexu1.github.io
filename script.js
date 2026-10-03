@@ -24,15 +24,3 @@ function selectPanel(){
 links.forEach(link=>link.addEventListener('click',event=>{event.preventDefault();history.pushState(null,'',link.hash);selectPanel();if(window.innerWidth<=700)document.querySelector('main').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});}));
 addEventListener('hashchange',selectPanel);addEventListener('popstate',selectPanel);selectPanel();
 document.getElementById('year').textContent=new Date().getFullYear();
-(async()=>{
- try{
-  if(location.protocol==='file:')throw new Error('offline');
-  const response=await fetch('/api/visits',{cache:'no-store'});
-  if(!response.ok)throw new Error('unavailable');
-  const data=await response.json();
-  if(!Number.isFinite(data.total)||!Number.isFinite(data.today))throw new Error('invalid');
-  document.getElementById('visits-total').textContent=data.total.toLocaleString('en-US');
-  document.getElementById('visits-today').textContent=data.today.toLocaleString('en-US');
-  document.getElementById('visits-status').textContent='Page views · Hong Kong time';
- }catch{document.getElementById('visits-status').textContent='Statistics unavailable';}
-})();

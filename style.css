@@ -4,3 +4,86 @@
 @media(max-width:700px){.header-inner{padding:16px 22px}.page{display:flex;flex-direction:column;gap:26px;padding:23px 20px}.content-nav{order:0;flex-shrink:0;top:8px;gap:5px;width:100%;padding:5px}.content-nav a{min-height:49px;font-size:22px;padding:6px 9px}.profile{order:1;width:100%}.profile-content{padding:0}.portrait{width:210px;height:240px;margin-bottom:22px}h1{font-size:34px}.chinese-name{margin-bottom:18px}.profile-links{margin-top:18px}.location{margin-top:16px}main{order:2;width:100%}.about h2{font-size:35px}.page-panel{min-height:0;padding:23px 21px}.interests ul{display:flex;gap:4px 15px}.interests li+li:before{content:none}.research-item{padding-left:15px}.research-item h3{font-size:23px}.contact-grid{gap:21px}.visit-stats{gap:15px}.cv-viewer{min-height:470px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.content-nav a{transition:none}}
 @media print{body{background:white}.masthead,.portrait,.profile-links,.content-nav,.location,.visit-stats,footer{display:none!important}.page{display:block;padding:0}.profile{margin-bottom:20px}.profile-content{text-align:left}.profile p{margin:3px 0}.page-panel{min-height:0;border:none;padding:0}.contact-grid{grid-template-columns:1fr 1fr}@page{margin:18mm}}
+.education{border-top:1px solid var(--line);margin-top:29px;padding-top:20px}.education h3{font-size:19px;margin:0 0 14px;font-weight:normal}.education-item{display:grid;grid-template-columns:125px minmax(0,1fr);gap:14px;padding:0 0 15px;margin-bottom:15px;border-bottom:1px solid #f0ecee}.education-item:last-child{padding-bottom:0;margin-bottom:0;border:0}.education-period{font-size:16px;color:var(--wine);margin:0}.education-item h4{font-size:18px;line-height:1.4;margin:0 0 3px}.education-item div>p{font-size:16px;color:var(--muted);margin:0}
+@media(max-width:700px){.education-item{grid-template-columns:1fr;gap:2px}}
+.awards{border-top:1px solid var(--line);margin-top:29px;padding-top:20px}.awards h3{font-size:19px;margin:0 0 14px;font-weight:normal}.award-item{padding:0 0 13px;margin-bottom:13px;border-bottom:1px solid #f0ecee}.award-item:last-child{padding-bottom:0;margin-bottom:0;border:0}.award-item h4{font-size:18px;line-height:1.4;margin:0 0 3px}.award-item p{font-size:16px;color:var(--muted);margin:0}
+@media(min-width:701px){body{font-size:17px}.content-nav a{font-size:21px}.about h2{font-size:37px}.section-title h2{font-size:28px}.research-item h3{font-size:22px}.research-item .paper-authors{font-size:16px;line-height:1.55;margin:0 0 5px}.research-item .paper-venues{font-size:15px;line-height:1.55}.research-item .paper-abstract{font-size:15px;line-height:1.6;color:#645860;margin:8px 0 0}.research-item .paper-award{font-size:15px;line-height:1.55;color:var(--wine);font-weight:bold;margin:7px 0 0}.affiliation,.university{font-size:16px}.education h3,.awards h3,.interests h3{font-size:18px}.education-item h4,.award-item h4{font-size:17px}.education-item div>p,.award-item p,.interests li{font-size:16px}.contact-grid{font-size:15px}}
+
+body{background:#f6f4f3}
+.header-inner,.page{max-width:1220px}
+.header-inner{padding-top:19px;padding-bottom:19px}
+.page{grid-template-columns:260px minmax(0,1fr);column-gap:52px;row-gap:22px;padding-top:40px;padding-bottom:48px}
+.profile-content{position:sticky;top:26px;padding:24px 20px 25px;background:#fff;border:1px solid #e8e1e3;border-radius:10px;box-shadow:0 10px 30px #39252b0a}
+.portrait{width:220px;height:250px;margin-bottom:23px;border:7px solid #fff;border-radius:7px;outline:1px solid #e8e1e3}
+h1{font-size:34px}
+.chinese-name{margin-bottom:19px}
+.content-nav{top:14px;gap:6px;padding:6px;border-radius:9px;border-color:#e8e1e3;box-shadow:0 8px 24px #39252b0b}
+.content-nav a{min-height:50px;border-radius:6px;font-size:20px}
+.content-nav a.active{box-shadow:0 3px 8px #79213d26}
+.page-panel{padding:36px 40px;margin-bottom:28px;border:1px solid #e8e1e3;border-top:3px solid #8b3651;border-radius:9px;box-shadow:0 12px 34px #39252b08}
+.about h2{margin-bottom:20px}
+.about>p:not(.eyebrow){line-height:1.78;margin-bottom:17px}
+.education,.awards,.interests{margin-top:25px;padding-top:18px}
+.education h3,.awards h3,.interests h3{margin-bottom:12px;color:#4b3a41}
+.education-item{grid-template-columns:112px minmax(0,1fr);gap:12px;padding-bottom:13px;margin-bottom:13px}
+.education-period{font-size:15px}
+.education-item h4,.award-item h4{line-height:1.45}
+.award-item{position:relative;padding:0 0 12px 14px;margin-bottom:12px}
+.award-item:before{position:absolute;content:'';left:0;top:7px;width:5px;height:5px;border-radius:50%;background:#9a4962}
+.interests ul{gap:5px 0}
+.research-item{padding:19px 21px;margin-bottom:15px;border:1px solid #eee7e8;border-radius:8px;background:#fff}
+.research-item:before{left:0;top:18px;bottom:18px;width:3px;height:auto;border-radius:0 3px 3px 0}
+.research-item h3{margin-bottom:8px;line-height:1.4}
+.research-item .paper-authors{color:#4d4348}
+.research-item .paper-venues{color:#766a70}
+.research-item .paper-award{display:inline-block;padding:3px 10px;border-radius:20px;background:#f8eff2}
+.section-title{padding-bottom:13px;margin-bottom:19px;border-color:#e9e1e4}
+.publication-heading{margin-top:38px}
+#contact{margin:0 0 27px;padding:23px 26px;background:#fff;border:1px solid #e8e1e3;border-radius:9px;box-shadow:0 10px 28px #39252b08}
+#contact .section-title{margin-bottom:17px}
+.contact-grid{gap:24px}
+footer{padding-top:15px;margin-top:20px;border-color:#e2dadd}
+a{transition:color .15s ease,background-color .15s ease}
+.education-item,.award-item,.research-item{transition:transform .18s ease,box-shadow .18s ease}
+.education-item{padding:15px 16px;margin:0 0 11px;border:1px solid #eee6e8;border-radius:8px;background:linear-gradient(145deg,#fff,#fcfafb);box-shadow:0 3px 8px #39252b0a,0 1px 2px #39252b08}
+.education-item:last-child{padding:15px 16px;margin-bottom:0;border:1px solid #eee6e8}
+.award-item{padding:13px 15px 13px 28px;margin:0 0 10px;border:1px solid #eee6e8;border-radius:8px;background:linear-gradient(145deg,#fff,#fcfafb);box-shadow:0 3px 8px #39252b0a,0 1px 2px #39252b08}
+.award-item:last-child{padding:13px 15px 13px 28px;margin-bottom:0;border:1px solid #eee6e8}
+.award-item:before{left:14px;top:21px}
+.research-item{border-color:#ece3e6;box-shadow:0 5px 12px #39252b0c,0 1px 3px #39252b09}
+.research-item:last-child{border:1px solid #ece3e6;margin-bottom:0;padding-bottom:19px}
+.research-item h3{display:flex;align-items:baseline;flex-wrap:wrap;gap:7px 10px}
+.paper-status{display:inline-block;padding:3px 9px;border:1px solid #ead7de;border-radius:20px;background:linear-gradient(135deg,#fbf4f6,#f5e9ee);color:#7a4054;font:normal 12px/1.5 var(--font);letter-spacing:.15px;white-space:nowrap}
+@media(hover:hover){
+  .education-item:hover,.award-item:hover,.research-item:hover{transform:translateY(-3px);box-shadow:0 10px 22px #39252b12,0 3px 6px #39252b0a}
+}
+
+@media(max-width:950px){
+  .page{grid-template-columns:225px minmax(0,1fr);column-gap:30px;padding:30px 23px 38px}
+  .profile-content{padding:20px 14px}
+  .portrait{width:195px;height:225px}
+  .page-panel{padding:29px 28px}
+}
+
+@media(max-width:700px){
+  .header-inner{padding:15px 21px}
+  .page{gap:20px;padding:20px 17px 32px}
+  .content-nav{top:7px}
+  .content-nav a{font-size:19px;min-height:46px}
+  .profile-content{position:static;padding:18px 16px 20px}
+  .portrait{width:190px;height:215px;margin-bottom:18px}
+  h1{font-size:31px}
+  .chinese-name{margin-bottom:15px}
+  .profile-links{margin-top:16px}
+  .location{margin-top:14px}
+  .page-panel{padding:25px 21px;margin-bottom:20px;border-radius:8px}
+  .about h2{font-size:33px;margin-bottom:17px}
+  .about>p:not(.eyebrow){line-height:1.72;margin-bottom:16px}
+  .education-item{grid-template-columns:1fr;gap:2px}
+  .research-item{padding:17px 16px;margin-bottom:12px}
+  .research-item:before{top:16px;bottom:16px}
+  .research-item h3{font-size:21px}
+  .section-title h2{font-size:26px}
+  .publication-heading{margin-top:31px}
+  #contact{padding:20px 19px}
+}
