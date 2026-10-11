@@ -11,3 +11,49 @@
 @media(max-width:700px){html{scroll-padding-top:80px}.header-inner{padding:15px 20px}.page{display:flex;flex-direction:column;gap:26px;padding:20px 16px 30px}.content-nav{order:0;top:8px;width:100%;flex-shrink:0}.content-nav a{min-height:42px;font-size:17px}.profile{order:1;position:static;max-height:none;overflow:visible;width:100%}.profile-content{max-width:350px;margin:auto;text-align:center}.portrait{max-width:220px;margin-bottom:23px}.profile-links{justify-content:center}.location{margin-top:18px}main{order:2;width:100%;padding:25px 22px}h1{font-size:29px}.about h2{font-size:28px}.page-panel{min-height:0}.section-title h2{font-size:23px}.research-item h3{font-size:18px}.cv-viewer{min-height:480px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.content-nav a{transition:none}}
 @media print{body{background:white}.masthead,.portrait,.profile-links,.content-nav,.location,footer{display:none!important}.page{display:block;padding:0}.profile{position:static;max-height:none;overflow:visible;margin-bottom:20px}.profile-content{padding:0;text-align:left}main{border:0;padding:0;box-shadow:none}.page-panel{min-height:0}.research-item,.education-item,.award-item{break-inside:avoid}@page{margin:18mm}}
+
+/* October 2026 redesign — spacious academic layout / Oxford-blue palette */
+:root{
+  --wine:#07358b;
+  --ink:#192639;
+  --muted:#5d6d83;
+  --line:#e0e7f0;
+}
+body{background:#f8f9fc;color:var(--ink);font-size:17px;line-height:1.73}
+a:hover{color:#092d72}
+strong{color:#162743}
+.masthead{border-top:4px solid #07358b;border-bottom:1px solid #e6eaf2;background:#ffffff}
+.header-inner{max-width:1120px;padding:14px 34px}
+.wordmark{font-size:23px;color:#19345e}
+.wordmark span{color:#7d91b0;font-size:14px}
+.page{max-width:1120px;padding:48px 34px 70px;grid-template-columns:310px minmax(0,1fr);column-gap:48px;row-gap:19px}
+.profile{top:24px;max-height:calc(100vh - 48px);max-height:calc(100dvh - 48px);scrollbar-color:#c7d6eb transparent}
+.profile-content{padding:0 0 18px}
+.portrait{width:100%;aspect-ratio: 4/4.7;padding:8px;margin:0 auto 27px;border:1px solid #dce5f1;border-radius:15px;background:white;box-shadow:0 10px 28px rgba(25,53,93,.06)}
+.portrait img{border-radius:9px;object-position:center 25%}
+h1{font-size:37px;font-weight:bold;letter-spacing:-.7px;margin-bottom:4px}
+.chinese-name{font-size:17px;color:#8293aa;margin-bottom:18px}
+.position{font-size:17px;color:#07358b;margin-bottom:3px}
+.affiliation,.university{font-size:15px;color:#617086;line-height:1.7;margin-bottom:12px}
+.profile-links{margin-top:19px;gap:9px}
+.profile-links a:not(.email-link){border:1px solid #d8e2f1;border-radius:18px;padding:5px 13px;color:#07358b;background:#fff}
+.profile-links .email-link{font-size:14px;color:#07358b}
+.location{color:#8493a8;border-top:1px solid #dfe6f0}
+.content-nav{top:14px;border:1px solid #dce5f1;border-radius:40px;padding:6px;gap:7px;box-shadow:none}
+.content-nav a{min-height:45px;border-radius:30px;font-size:18px;color:#50627f}
+.content-nav a:hover{background:#edf3fc;color:#07358b}
+.content-nav a.active{background:#07358b;color:#fff}
+main{padding:32px 34px 20px;border:1px solid #e2e8f0;border-radius:15px;box-shadow:0 6px 22px rgba(22,48,84,.025)}
+.eyebrow{color:#587bb5;font-size:12px;font-weight:bold}
+.about h2{font-size:32px}
+.about>p:not(.eyebrow){margin-bottom:20px}
+.section-title h2,.education h3,.awards h3,.interests h3{color:#07358b}
+.education-period,.paper-status{color:#5476ad}
+.paper-award,.interests li{color:#07358b}
+.paper-authors{color:#485872}
+.paper-venues{color:#718199}
+.award-item:before{background:#07358b}
+.cv-download{border-radius:20px}
+footer{color:#8491a2}
+@media(max-width:1010px){.page{grid-template-columns:270px minmax(0,1fr);column-gap:30px;padding:35px 24px 60px}.header-inner{padding-inline:24px}main{padding:27px}.portrait{aspect-ratio:4/4.8}}
+@media(max-width:700px){.page{padding:20px 17px 36px;gap:24px}.content-nav{top:8px}.profile{max-height:none;overflow:visible}.profile-content{max-width:365px}.portrait{max-width:300px;aspect-ratio:4/4.7}.profile-links{justify-content:center}main{padding:26px 23px}.header-inner{padding:13px 20px}h1{font-size:34px}}
