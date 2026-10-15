@@ -1,7 +1,7 @@
-// Add your own files/links here. Paths are relative to index.html.
 window.PROFILE = {
-  photoUrl: 'profile-photo.jpg', // Example: 'images/profile.jpg'
-  cvUrl: null,    // Example: 'files/CV_Haozhe_Xu.pdf'
+  photoUrl: 'profile-photo.jpg',
+  cvUrl: null,
   scholarUrl: null,
-  githubUrl: null
+  githubUrl: null,
+  linkedinUrl: null
 };
