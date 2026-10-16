@@ -10,7 +10,7 @@ const sections = navLinks
 
 function updateActiveNavigation() {
   const headerHeight = document.querySelector('.topbar')?.getBoundingClientRect().height || 70;
-  const activationLine = headerHeight + 55;
+  const activationLine = headerHeight + Math.min(230, window.innerHeight * 0.30);
   let activeId = sections[0]?.id;
 
   // Choose the latest section reached by the reading position, rather than
@@ -48,5 +48,14 @@ function requestNavUpdate() {
 window.addEventListener('scroll', requestNavUpdate, { passive: true });
 window.addEventListener('resize', requestNavUpdate);
 window.addEventListener('hashchange', requestNavUpdate);
+// Show the chosen section immediately when a navigation item is clicked.
+navLinks.forEach(link => link.addEventListener('click', () => {
+  navLinks.forEach(item => {
+    const active = item === link;
+    item.classList.toggle('active', active);
+    if (active) item.setAttribute('aria-current','location');
+    else item.removeAttribute('aria-current');
+  });
+}));
 window.addEventListener('load', requestNavUpdate);
 requestNavUpdate();
