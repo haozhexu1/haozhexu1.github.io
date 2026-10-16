@@ -535,3 +535,38 @@ footer a{color:var(--blue);}
 @media (max-width:900px) {
   .hero-text .hero-bio {text-align:left;}
 }
+
+/* Small adjustments to the original, left-aligned homepage layout. */
+.hero-chinese-name {
+  display:inline-block;
+  vertical-align:baseline;
+  margin-left:18px;
+  font-family:"Noto Serif CJK SC","Songti SC","SimSun",serif;
+  font-size:.42em;
+  font-weight:500;
+  letter-spacing:0;
+  color:#4b6383;
+  white-space:nowrap;
+}
+@media(min-width:901px){
+  .hero-photo-frame {transform:translateX(18px);}
+}
+@media(max-width:600px){
+  .hero-chinese-name {margin-left:10px;font-size:.38em;}
+}
+
+/* Subtle right shift for the entire hero text column (desktop only). */
+@media (min-width:901px) {
+  .hero-text {transform:translateX(15px);}
+}
+
+/* Final hero refinement: single paragraph and a slightly more inset text column. */
+@media (min-width:901px) {
+ .hero-text {transform:translateX(24px);}
+}
+.hero-text .hero-bio-unified {margin-top:26px; margin-bottom:0; line-height:1.9; text-align:left; text-align-last:left; word-spacing:normal;}
+@media (max-width:900px) {.hero-text {transform:none;} .hero-text .hero-bio-unified{margin-top:20px;}}
+
+/* Restore justified text for the single About paragraph. */
+.hero-text .hero-bio-unified {text-align:justify;text-align-last:left;}
+@media(max-width:700px){.hero-text .hero-bio-unified{text-align:left;}}
