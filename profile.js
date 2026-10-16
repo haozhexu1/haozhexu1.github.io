@@ -1,6 +1,6 @@
 window.PROFILE = {
   photoUrl: 'profile-photo.jpg',
-  cvUrl: null,
+  cvUrl: 'Haozhe_CV.pdf',
   scholarUrl: null,
   githubUrl: null,
   linkedinUrl: null

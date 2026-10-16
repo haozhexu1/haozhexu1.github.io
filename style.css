@@ -272,3 +272,50 @@ footer{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;border
 .research-item{box-shadow:0 4px 18px rgba(25,45,75,.025)}
 .paper-tag{letter-spacing:.1px}
 @media (max-width:760px){.education-item{gap:16px}}
+
+/* Academic refinement — cleaner hierarchy, restrained highlights. */
+:root{
+  --primary:#233e62;
+  --primary-soft:#64758b;
+  --accent:#a47c52;
+  --bg:#fcfcfb;
+  --line:#e6e8eb;
+}
+.site-header{background:rgba(251,250,248,.96);box-shadow:0 2px 16px rgba(29,42,59,.025)}
+.site-brand{letter-spacing:-.55px}
+.content-nav a{font-size:16px;letter-spacing:.15px}
+.content-nav a.active::after{height:2px}
+.about>p:not(.eyebrow){line-height:1.82;color:#343f4f}
+.section-title{margin-bottom:29px;border-bottom-color:#dce2e8}
+.block-heading,.group-heading{margin-bottom:17px}
+.group-heading h3,.block-heading h3{font-size:25px;letter-spacing:-.25px}
+.research-group{margin-bottom:40px}
+.research-item{
+  position:relative;border:1px solid #e9edf1;border-radius:12px;
+  box-shadow:0 3px 16px rgba(31,53,86,.025);padding:24px 27px;
+  transition:border-color .15s ease,box-shadow .15s ease;
+}
+.research-item:hover{border-color:#d5dfe8;box-shadow:0 6px 22px rgba(31,53,86,.055)}
+.research-item h3{font-size:21px;line-height:1.42;letter-spacing:-.12px;margin-bottom:10px;font-weight:700;color:#21344d}
+.paper-topline{margin-bottom:13px}
+.paper-tag{font-size:12px;letter-spacing:.25px;border-radius:5px;padding:3px 9px}
+.paper-status{font-size:13px}
+.paper-authors{font-size:15.5px;margin-bottom:7px;color:#4b596a}
+.paper-authors strong{font-weight:700;color:#233e62}
+.paper-venues{font-size:14px;line-height:1.7}
+.paper-award{font-size:14px;margin-top:9px}
+.info-card{border-radius:11px;box-shadow:none;background:#fff;padding:17px 20px}
+.education-item{gap:18px}
+.edu-main h4{font-size:19px}
+.cv-download{
+  padding:10px 19px;background:var(--primary);color:white;border-color:var(--primary);
+  border-radius:7px;font-size:15px;font-weight:700;transition:background .15s ease;
+}
+.cv-download:hover{background:#355779;color:#fff;text-decoration:none}
+.cv-viewer{border-radius:9px;background:#fff;min-height:730px}
+@media(max-width:760px){
+  .research-item{padding:20px 18px}
+  .research-item h3{font-size:19px}
+  .section-title{margin-bottom:23px}
+  .cv-viewer{min-height:500px}
+}
