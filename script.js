@@ -1,68 +1,52 @@
-'use strict';
-const profile = window.PROFILE || {};
-const portraitHost = document.getElementById('portrait');
-if (profile.photoUrl && portraitHost) {
-  const image = new Image();
-  image.alt = 'Portrait of Haozhe Xu';
-  image.onload = () => portraitHost.replaceChildren(image);
-  image.src = profile.photoUrl;
-}
+// Footer year
+const year = document.getElementById('year');
+if (year) year.textContent = new Date().getFullYear();
 
-const linkContainer = document.querySelector('.profile-links');
-const linkMap = [
-  ['scholarUrl', 'Google Scholar'],
-  ['githubUrl', 'GitHub'],
-  ['linkedinUrl', 'LinkedIn']
-];
-if (linkContainer) {
-  for (const [key, label] of linkMap) {
-    if (!profile[key]) continue;
-    const a = document.createElement('a');
-    a.href = profile[key];
-    a.textContent = label;
-    a.target = '_blank';
-    a.rel = 'noopener';
-    linkContainer.append(a);
+// Keep the highlighted navigation item in sync with the section on screen.
+const navLinks = [...document.querySelectorAll('.topbar nav a[href^="#"]')];
+const sections = navLinks
+  .map(link => document.getElementById(link.hash.slice(1)))
+  .filter(Boolean);
+
+function updateActiveNavigation() {
+  const headerHeight = document.querySelector('.topbar')?.getBoundingClientRect().height || 70;
+  const activationLine = headerHeight + 55;
+  let activeId = sections[0]?.id;
+
+  // Choose the latest section reached by the reading position, rather than
+  // whichever tall section happens to have an observer intersection.
+  for (const section of sections) {
+    if (section.getBoundingClientRect().top <= activationLine) {
+      activeId = section.id;
+    }
+  }
+
+  // The last section can be shorter than the viewport; highlight it at page end.
+  const doc = document.documentElement;
+  if (window.innerHeight + window.scrollY >= doc.scrollHeight - 3 && sections.length) {
+    activeId = sections[sections.length - 1].id;
+  }
+
+  for (const link of navLinks) {
+    const isActive = link.hash === '#' + activeId;
+    link.classList.toggle('active', isActive);
+    if (isActive) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
   }
 }
 
-if (profile.cvUrl) {
-  document.querySelector('.cv-placeholder').hidden = true;
-  const holder = document.getElementById('cv-document');
-  holder.hidden = false;
-  const a = document.createElement('a');
-  a.href = profile.cvUrl;
-  a.textContent = 'View / Download CV';
-  a.className = 'cv-download';
-  a.target = '_blank';
-  a.rel = 'noopener';
-  const frame = document.createElement('iframe');
-  frame.src = profile.cvUrl;
-  frame.title = 'Curriculum Vitae of Haozhe Xu';
-  frame.className = 'cv-viewer';
-  holder.append(a, frame);
-}
-
-const links = [...document.querySelectorAll('.content-nav a')];
-function selectPanel() {
-  const current = ['about','research','cv'].includes(location.hash.slice(1)) ? location.hash.slice(1) : 'about';
-  document.querySelectorAll('.page-panel').forEach(panel => panel.hidden = panel.id !== current);
-  links.forEach(link => {
-    const active = link.hash === '#' + current;
-    link.classList.toggle('active', active);
-    if (active) link.setAttribute('aria-current', 'page');
-    else link.removeAttribute('aria-current');
+let pending = false;
+function requestNavUpdate() {
+  if (pending) return;
+  pending = true;
+  requestAnimationFrame(() => {
+    pending = false;
+    updateActiveNavigation();
   });
 }
-links.forEach(link => link.addEventListener('click', event => {
-  event.preventDefault();
-  history.pushState(null, '', link.hash);
-  selectPanel();
-  if (window.innerWidth <= 760) {
-    document.querySelector('main').scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
-  }
-}));
-addEventListener('hashchange', selectPanel);
-addEventListener('popstate', selectPanel);
-selectPanel();
-document.getElementById('year').textContent = new Date().getFullYear();
+
+window.addEventListener('scroll', requestNavUpdate, { passive: true });
+window.addEventListener('resize', requestNavUpdate);
+window.addEventListener('hashchange', requestNavUpdate);
+window.addEventListener('load', requestNavUpdate);
+requestNavUpdate();
