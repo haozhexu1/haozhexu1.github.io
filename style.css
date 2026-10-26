@@ -570,3 +570,281 @@ footer a{color:var(--blue);}
 /* Restore justified text for the single About paragraph. */
 .hero-text .hero-bio-unified {text-align:justify;text-align-last:left;}
 @media(max-width:700px){.hero-text .hero-bio-unified{text-align:left;}}
+
+/* Refined academic background, 2026 */
+.refined-background .entry-body{padding:24px 25px!important;background:#fff!important;border-left:3px solid #8daed9!important;}
+.refined-background .background-card-top{display:flex;align-items:center;gap:14px;margin-bottom:17px;}
+.refined-background .background-card-top .entry-logo{width:48px;height:48px;flex:0 0 48px;object-fit:contain;background:#fff;border:1px solid #edf1f7;border-radius:8px;padding:5px;box-sizing:border-box;}
+.refined-background .background-card-heading h4{font-size:15px;line-height:1.45;margin:0;color:#1b3455;}
+.refined-background .background-location{font-size:11.5px;color:#7a8ba0;margin:4px 0 0;}
+.refined-background .background-role{font-size:13.4px;font-weight:700;color:#304a70;margin:0 0 3px;line-height:1.6;}
+.refined-background .background-org{font-size:12px;color:#5b7090;margin:0 0 5px;line-height:1.6;}
+.refined-background .background-date{font-size:11.5px;color:#8292a6;margin:0;white-space:normal;}
+.refined-background .background-facts{border-top:1px solid #e7edf5;margin-top:17px;padding-top:13px;}
+.refined-background .background-facts p{display:grid;grid-template-columns:95px 1fr;gap:10px;font-size:11.6px;line-height:1.65;margin:0 0 7px;color:#61748e;}
+.refined-background .background-facts strong{font-weight:700;color:#3a5172;}
+.refined-background .background-position{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;}
+.refined-background .background-description{font-size:12px;line-height:1.8;color:#596e89;margin:13px 0 0;max-width:810px;}
+.honors-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+.honors-grid .honor-org{font-size:11.5px;line-height:1.55;color:#7b8da4;margin:5px 0 0;}
+@media(max-width:850px){.honors-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media(max-width:560px){.honors-grid{grid-template-columns:1fr;}.refined-background .background-facts p{grid-template-columns:1fr;gap:1px;}}
+
+/* Timeline redesign: one dated academic appointment per row */
+.background-section .timeline-list {display:flex!important;flex-direction:column!important;gap:13px!important;margin:18px 0 35px;}
+.background-section .timeline-entry {display:grid!important;grid-template-columns:170px minmax(0,1fr)!important;gap:18px!important;align-items:stretch!important;margin:0!important;padding:0!important;min-width:0;}
+.background-section .timeline-entry .timeline-date {padding:22px 0 0 7px;font-size:12px;font-weight:700;color:#31588c;white-space:nowrap;font-variant-numeric:tabular-nums;letter-spacing:.01em;}
+.background-section .timeline-entry .entry-body {width:100%;padding:21px 25px!important;border:1px solid #e0e8f3!important;border-left:3px solid #8daed9!important;border-radius:10px;box-shadow:0 5px 18px rgba(36,67,111,.035);background:#fff;}
+.background-section .timeline-entry .background-card-top{margin-bottom:10px;}
+.background-section .timeline-entry .background-facts{margin-top:11px;padding-top:10px;}
+.background-section .timeline-entry .background-description{margin-top:9px;}
+.background-section .timeline-entry .background-position{display:block;}
+.scholar-list,.conference-list{margin:9px 0 0;color:#587295;font-size:11.8px;line-height:1.65;}
+.conference-label{display:block;font-weight:700;color:#3b5679;margin-bottom:3px;}
+.conference-line{display:block;position:relative;padding-left:13px;margin:3px 0;}
+.conference-line:before{content:'•';position:absolute;left:1px;color:#86a8d8;}
+@media(max-width:720px){.background-section .timeline-entry{grid-template-columns:1fr!important;gap:5px!important}.background-section .timeline-entry .timeline-date{padding:0 0 0 4px;font-size:11.5px}.background-section .timeline-entry .entry-body{padding:17px 18px!important}}
+
+
+/* Site-wide typography, alignment and legibility refresh (October 2026). */
+:root{--ink:#192c46;--text:#30425b;--muted:#4b5f79;--line:#d9e3ef;--soft:#f5f8fc}
+.section-heading>p,.intro-note,.hero-affiliation,.section .entry-detail,.cv-band p,footer{color:#405571}
+.group-header{align-items:center;gap:16px;padding-bottom:12px;border-bottom:1px solid #c6d6e9}
+.group-header h3{color:#1b3455;font-size:17px;line-height:1.4}
+.group-header span{color:#4b6382;font-size:10px;line-height:1.5;text-align:right}
+.section-heading{margin-bottom:27px}
+.section-heading h2{color:#172b48}
+/* Paper cards share exactly the same grid, hierarchy, spacing and metadata treatment. */
+.research-section .scholarly-paper{display:block;padding:21px 0 22px;margin:0!important;border-bottom:1px solid #e0e8f2}
+.research-section .scholarly-paper:last-child{border-bottom:0}
+.research-section .scholarly-paper > div:last-child{border-left:3px solid #7da6d6;padding:0 12px 0 19px}
+.research-section .scholarly-paper h4{font-size:16px;line-height:1.55;margin:0 0 8px}
+.research-section .scholarly-paper .authors{font-size:13.5px;color:#31435c;margin:0 0 5px}
+.research-section .scholarly-paper .venue{font-size:12.8px;color:#245086;margin:0}
+.research-section .conference-list{font-family:Georgia,'Times New Roman',serif;font-size:12.5px;line-height:1.65;color:#344d6b;margin:10px 0 0;padding-top:9px;border-top:1px solid #edf1f6}
+.research-section .conference-line{margin:5px 0;padding-left:15px}
+.research-section .conference-line:before{color:#315e97;content:'–'}
+.research-section .paper-actions{margin-top:11px}
+.research-section .paper-actions .paper-link-button{min-height:32px;padding:6px 12px;font-size:12px}
+/* Date occupies a neat two-line mini-column instead of a long, floating string. */
+.background-section .timeline-list{gap:0!important;margin:13px 0 32px}
+.background-section .timeline-entry{grid-template-columns:155px minmax(0,1fr)!important;gap:22px!important;padding:14px 0!important;border-bottom:1px solid #e2eaf4;align-items:start!important}
+.background-section .timeline-entry:last-child{border-bottom:0}
+.background-section .timeline-entry .timeline-date{display:flex;flex-direction:column;gap:3px;align-items:flex-start;margin-top:6px;padding:9px 12px!important;background:#f2f6fc;border:1px solid #d7e3f3;border-radius:7px;white-space:normal;max-width:150px;color:#254d80;letter-spacing:0;line-height:1.45}
+.background-section .timeline-date .date-start{font-size:12px;font-weight:700;color:#214b80}
+.background-section .timeline-date .date-end{font-size:11px;font-weight:500;color:#486581}
+.background-section .timeline-entry .entry-body{box-shadow:none!important;border:0!important;border-left:2px solid #a6c2e5!important;padding:8px 12px 8px 19px!important;border-radius:0;background:transparent!important}
+.refined-background .background-location,.refined-background .background-org,.refined-background .background-description,.refined-background .background-facts p{color:#425874}
+.refined-background .background-role,.refined-background .background-facts strong{color:#273f60}
+.refined-background .background-card-heading h4{font-size:15px;color:#162e4e}
+.refined-background .background-facts p{font-size:12px;grid-template-columns:130px minmax(0,1fr);gap:12px}
+.refined-background .background-facts{border-color:#e3eaf3}
+/* Honors and service both use standard cards with identical padding and title scale. */
+.honors-grid,.services-grid{gap:14px;grid-template-columns:repeat(2,minmax(0,1fr))}
+.academic-entries:is(.honors-grid,.services-grid) .entry-body{padding:21px 22px!important;border:1px solid #dde7f3!important;border-left:3px solid #8fb3dd!important;border-radius:8px!important;box-shadow:none!important;background:#fff!important}
+.academic-entries:is(.honors-grid,.services-grid) .uniform-card-title{font-size:14.5px;line-height:1.5;color:#1c3555;margin:0 0 8px}
+.honors-grid .honor-year{display:inline-flex;background:#eff5fc;color:#245188;border:1px solid #d5e3f4;border-radius:4px;padding:2px 8px;font-size:11px;font-weight:700;margin-bottom:12px}
+.honors-grid .entry-main,.services-grid .entry-detail,.honors-grid .honor-org{font-size:12px!important;color:#415874!important;line-height:1.6}
+.services-grid .entry-detail{margin:0!important}
+/* Miscellaneous lightly colored text is now readable on a white background. */
+.hero-bio,.hero-affiliation,.section .background-description,.section .background-location,.section .background-org,.cv-band p,.intro-note{color:#40546e}
+.topbar nav a{color:#40546c}
+footer{font-size:11.5px;color:#50627a}
+@media(max-width:720px){
+ .background-section .timeline-entry{grid-template-columns:1fr!important;gap:6px!important;padding:13px 0!important}
+ .background-section .timeline-entry .timeline-date{flex-direction:row;gap:9px;align-items:center;margin:0 0 0 2px;max-width:none;width:max-content;padding:6px 10px!important}
+ .background-section .timeline-entry .entry-body{padding:8px 6px 8px 14px!important}
+ .refined-background .background-facts p{grid-template-columns:1fr;gap:0}
+}
+@media(max-width:560px){.honors-grid,.services-grid{grid-template-columns:1fr}.group-header span{max-width:48%}}
+
+
+/* Oct 2026: restrained academic CV layout inspired by clean faculty homepages. */
+/* Keep section headers clear of the top edge and give all rows breathing room. */
+.section{padding-top:64px;padding-bottom:66px;}
+.section-heading{margin:0 0 34px!important;min-height:38px;align-items:center;}
+.section-heading h2{margin:0!important;padding-left:0!important;border-left:0!important;font-size:26px;line-height:1.5;}
+.group-header{margin:34px 0 14px!important;padding:0 0 14px!important;align-items:center!important;min-height:40px;border-bottom:1px solid #d9e3ef;}
+.group-header h3{margin:0!important;line-height:1.55!important;}
+.group-header > span{font-size:10px;color:#50647f;}
+/* No pill, outer rectangle, colored vertical rail or negative offsets for Education / Experience. */
+.background-section .timeline-list{margin:0 0 38px!important;gap:0!important;}
+.background-section .timeline-entry{grid-template-columns:145px minmax(0,1fr)!important;gap:24px!important;padding:24px 4px!important;border-bottom:1px solid #e2e8f0!important;align-items:start!important;background:transparent!important;}
+.background-section .timeline-entry:last-child{border-bottom:0!important;}
+.background-section .timeline-entry .timeline-date{display:block!important;margin:0!important;padding:6px 0 0!important;border:0!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;max-width:none!important;color:#354b68!important;line-height:1.75;}
+.background-section .timeline-date .date-start,.background-section .timeline-date .date-end{display:block!important;font-size:12px!important;line-height:1.65;font-weight:600!important;color:#38516e!important;}
+.background-section .timeline-date .date-end{font-weight:400!important;color:#536782!important;}
+.background-section .timeline-date .date-end::before{content:'— ';}
+.background-section .timeline-entry .entry-body{border:0!important;box-shadow:none!important;border-radius:0!important;padding:0!important;background:transparent!important;min-width:0!important;}
+.refined-background .background-card-top{margin:0 0 11px!important;align-items:center!important;gap:13px!important;}
+.refined-background .background-card-top .entry-logo{width:44px;height:44px;flex:0 0 44px;padding:5px;border-radius:6px;border:1px solid #e8edf4;}
+.refined-background .background-card-heading h4{font-size:16px!important;line-height:1.5!important;color:#1a304d!important;margin:0!important;}
+.refined-background .background-location{font-size:12px!important;color:#445a76!important;margin:1px 0 0!important;}
+.refined-background .background-role{font-size:13.5px!important;line-height:1.65!important;color:#233a58!important;margin:0 0 3px!important;}
+.refined-background .background-org{font-size:12.5px!important;line-height:1.7!important;color:#455c77!important;margin:0!important;}
+.refined-background .background-description{font-size:12.5px!important;line-height:1.85!important;color:#344c68!important;margin:11px 0 0!important;}
+.refined-background .background-facts{margin:15px 0 0!important;padding:12px 0 0!important;border-top:1px solid #e6edf4!important;}
+.refined-background .background-facts p{grid-template-columns:140px minmax(0,1fr)!important;color:#3b506d!important;font-size:12px!important;line-height:1.75!important;margin:0 0 6px!important;}
+/* Remove top-border / headline collisions throughout other card collections. */
+.academic-entries:is(.honors-grid,.services-grid) .entry-body{padding:24px 22px 22px!important;border:1px solid #e0e7f0!important;border-radius:8px!important;}
+.honors-grid .honor-year{margin:0 0 12px!important;}
+.research-section .scholarly-paper{padding-top:26px!important;padding-bottom:27px!important;}
+.research-section .scholarly-paper > div:last-child{padding-top:4px!important;padding-left:20px!important;}
+.research-section .scholarly-paper h4{line-height:1.6!important;}
+/* Improve tiny secondary metadata without letting it compete with headings. */
+.section-heading>p,.group-header span,.research-section .paper-note,.research-section .conference-list,.honors-grid .honor-org{color:#465c79!important;}
+@media(max-width:720px){
+ .background-section .timeline-entry{grid-template-columns:1fr!important;gap:10px!important;padding:19px 0!important;}
+ .background-section .timeline-entry .timeline-date{display:flex!important;gap:5px!important;flex-wrap:wrap;padding:0!important;}
+ .background-section .timeline-date .date-start,.background-section .timeline-date .date-end{display:inline!important;}
+ .refined-background .background-facts p{grid-template-columns:1fr!important;gap:0!important;}
+ .group-header{margin-top:27px!important;}
+}
+
+
+/* 2026 refinement: restrained academic list layout, inspired by Caesar Wu's Services & Awards page. */
+:root{--ink:#1c2e47;--muted:#40546e;--line:#e0e7ef}
+.section .group-header{margin:30px 0 8px!important;min-height:auto!important;padding:0 0 12px!important;border-bottom:1px solid #dbe4ee!important}
+.section .group-header h3{font-size:19px!important;line-height:1.4!important}
+/* Visually quiet, consistent presentation of awards and service activities. */
+.plain-academic-list{display:block!important;margin:5px 0 0!important;padding:0!important;max-width:1040px}
+.plain-academic-item{display:block!important;margin:0!important;padding:15px 5px!important;border:0!important;border-bottom:1px solid #e8edf3!important;background:transparent!important;box-shadow:none!important;min-height:0!important}
+.plain-academic-item:last-child{border-bottom:0!important}
+.plain-item-content{display:block!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;min-width:0}
+.plain-item-content .honor-year{display:inline-block!important;min-width:52px!important;background:transparent!important;border:0!important;padding:0!important;margin:0 18px 0 0!important;color:#285383!important;font-size:13px!important;font-weight:700!important;vertical-align:baseline!important}
+.plain-item-content .uniform-card-title{display:inline!important;font-size:15px!important;line-height:1.65!important;font-weight:700!important;color:#203751!important;margin:0!important}
+.plain-item-content .entry-main,.plain-item-content .honor-org{margin:4px 0 0 72px!important;font-size:13px!important;line-height:1.7!important;color:#41546e!important}
+.services-list .plain-item-content .entry-detail{margin:5px 0 0!important;font-size:13px!important;color:#4a5d75!important;line-height:1.6!important}
+/* Education + research experience: one unboxed CV row per institution, aligned dates. */
+.background-section .timeline-list{display:block!important;margin:0 0 34px!important;padding:0!important}
+.background-section .academic-timeline-row{display:grid!important;grid-template-columns:172px minmax(0,1fr)!important;gap:24px!important;align-items:start!important;padding:23px 4px!important;margin:0!important;border-bottom:1px solid #e5eaf0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important}
+.background-section .academic-timeline-row:last-child{border-bottom:0!important}
+.background-section .academic-period{display:block!important;padding:9px 0 0!important;margin:0!important;width:auto!important;max-width:none!important;border:0!important;background:transparent!important;box-shadow:none!important;border-radius:0!important;color:#344d6e!important;line-height:1.5!important}
+.background-section .academic-period .date-start,.background-section .academic-period .date-end{display:inline!important;font-size:12.5px!important;font-weight:500!important;color:#344d6e!important;white-space:nowrap!important}
+.background-section .academic-period .date-end:before{content:' – '!important}
+.background-section .academic-details{border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important;margin:0!important;background:transparent!important;width:auto!important;min-width:0!important}
+.background-section .background-card-top{margin:0 0 12px!important;display:flex!important;gap:14px!important;align-items:center!important}
+.background-section .background-card-top .entry-logo{width:48px!important;height:48px!important;flex:0 0 48px!important;border:1px solid #e5eaf0!important;border-radius:7px!important;padding:4px!important}
+.background-section .background-card-heading h4{font-size:17px!important;color:#192d47!important;line-height:1.45!important}
+.background-section .background-role{font-size:14px!important;color:#203954!important}
+.background-section .background-location,.background-section .background-org,.background-section .background-description,.background-section .background-facts p{color:#3b516b!important}
+.background-section .background-facts{margin:12px 0 0!important}
+/* Research cards: intrinsic height with minimum for short articles. Never fixed height. */
+.research-section .paper-list{display:block!important;margin:0!important;padding:0!important}
+.research-section .scholarly-paper.research-item{display:flex!important;align-items:stretch!important;min-height:164px!important;height:auto!important;max-height:none!important;box-sizing:border-box!important;padding:22px 0!important;margin:0!important;border:0!important;border-bottom:1px solid #e3eaf2!important;background:transparent!important;overflow:visible!important}
+.research-section .scholarly-paper.research-item:last-child{border-bottom:0!important}
+.research-section .scholarly-paper.research-item > div:last-child{flex:1!important;min-width:0!important;box-sizing:border-box!important;border-left:2px solid #8aacd4!important;padding:4px 20px 6px!important;background:transparent!important}
+.research-section .scholarly-paper h4{margin:0 0 10px!important;line-height:1.55!important;color:#1c314d!important}
+.research-section .scholarly-paper .authors{line-height:1.6!important}
+.research-section .conference-list{margin-top:12px!important;padding-top:8px!important;border-top:1px solid #edf1f5!important}
+.research-section .conference-line{line-height:1.65!important;overflow-wrap:anywhere}
+@media(max-width:760px){
+ .background-section .academic-timeline-row{grid-template-columns:1fr!important;gap:9px!important;padding:20px 0!important}
+ .background-section .academic-period{padding:0!important}
+ .plain-item-content .entry-main,.plain-item-content .honor-org{margin-left:0!important}
+ .plain-item-content .uniform-card-title{display:block!important;margin-top:3px!important}
+ .research-section .scholarly-paper.research-item{min-height:145px!important;padding:18px 0!important}
+ .research-section .scholarly-paper.research-item > div:last-child{padding-left:15px!important;padding-right:3px!important}
+}
+
+
+/* Screenshot-guided academic redesign – 26 October 2026 */
+:root {--academic-navy:#092d52;--academic-blue:#1763a4;--academic-muted:#3e5f83;--academic-line:#d4e0ea}
+.section .section-heading{margin:0 0 32px!important;padding:0!important;display:block!important;border:0!important}
+.section .section-heading h2{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(31px,3.1vw,42px)!important;letter-spacing:-.025em!important;line-height:1.2!important;color:var(--academic-navy)!important;font-weight:700!important;margin:0!important;padding:0 0 20px!important;position:relative}
+.section .section-heading h2:after{content:'';position:absolute;bottom:0;left:0;width:68px;height:3px;background:var(--academic-blue)}
+.section .section-heading>p{font-size:13px!important;margin:14px 0 0!important;color:#49617c!important}
+.section .group-header{margin:40px 0 18px!important;border:0!important;padding:0!important;display:block!important}
+.section .group-header h3{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(25px,2.5vw,32px)!important;font-weight:700!important;line-height:1.3!important;letter-spacing:-.015em;color:var(--academic-navy)!important;margin:0!important;padding:0 0 14px!important;position:relative}
+.section .group-header h3:after{content:'';height:3px;width:58px;background:var(--academic-blue);position:absolute;bottom:0;left:0}
+.section .group-header span{display:none!important}
+/* Research: restrained white panels with clear blue rail, min-height but no cap */
+.research-section .paper-list{display:grid!important;grid-template-columns:1fr!important;gap:20px!important;margin:0 0 12px!important}
+.research-section .scholarly-paper.research-item{background:#fff!important;border:1px solid #d8e2ed!important;border-left:5px solid var(--academic-blue)!important;box-shadow:0 4px 17px rgba(12,45,78,.035)!important;border-radius:0!important;min-height:182px!important;height:auto!important;max-height:none!important;padding:0!important;margin:0!important;display:block!important;overflow:visible!important}
+.research-section .scholarly-paper.research-item > div:last-child{padding:24px 30px 25px!important;border:0!important;min-height:182px!important;box-sizing:border-box!important}
+.research-type-label{font:700 10.5px/1.45 Arial,sans-serif!important;letter-spacing:.16em!important;color:#12609d!important;margin:0 0 13px!important}
+.research-section .scholarly-paper h4{font-family:Georgia,'Times New Roman',serif!important;font-size:21px!important;line-height:1.42!important;font-weight:500!important;color:var(--academic-navy)!important;margin:0 0 12px!important}
+.research-section .scholarly-paper .authors{font-size:13.5px!important;color:#314964!important;margin:0 0 8px!important}
+.research-section .scholarly-paper .venue{font-size:12.5px!important;color:#3f5f80!important;margin:0 0 6px!important}
+.research-section .conference-list{border:0!important;margin:10px 0 0!important;padding:0!important;font-size:13px!important;color:#385a7b!important}
+.research-section .conference-line{padding-left:15px!important;margin:5px 0!important}
+.research-section .conference-line:before{content:'•'!important;color:#5380ac!important;left:0!important}
+.research-section .paper-actions{margin-top:12px!important}
+/* Academic timeline: centered open circle, date on the left, content on right */
+.background-section .timeline-list{margin:0 0 38px!important;padding:0!important;display:block!important}
+.background-section .academic-timeline-row{display:grid!important;grid-template-columns:205px minmax(0,1fr)!important;gap:30px!important;padding:25px 0!important;position:relative!important;border-bottom:1px solid var(--academic-line)!important;align-items:start!important}
+.background-section .academic-timeline-row:last-child{border-bottom:0!important}
+.background-section .academic-timeline-row:before{content:'';position:absolute;top:0;bottom:0;left:210px;width:1px;background:var(--academic-line)}
+.background-section .academic-timeline-row:after{content:'';position:absolute;top:34px;left:205px;width:11px;height:11px;border:2px solid var(--academic-blue);border-radius:50%;background:#fff;box-sizing:border-box}
+.background-section .academic-period{display:block!important;padding:6px 12px 0 0!important;text-align:right!important;margin:0!important;white-space:normal!important;line-height:1.5!important;font-size:12.7px!important;color:#1e5f9c!important;font-weight:600!important;background:none!important;border:0!important;box-shadow:none!important}
+.background-section .academic-details{padding:0 0 0 12px!important;border:0!important;background:transparent!important;min-width:0!important}
+.background-section .timeline-position-title{font-family:Georgia,'Times New Roman',serif!important;font-size:20px!important;font-weight:700!important;color:var(--academic-navy)!important;line-height:1.4!important;margin:0 0 9px!important}
+.background-section .background-card-top{margin:0 0 7px!important;gap:10px!important;align-items:center!important}
+.background-section .background-card-top .entry-logo{width:30px!important;height:30px!important;flex:0 0 30px!important;padding:2px!important;border:0!important;border-radius:0!important}
+.background-section .background-card-heading h4{font-family:Georgia,'Times New Roman',serif!important;font-weight:500!important;font-size:15.5px!important;line-height:1.5!important;color:#365879!important}
+.background-section .background-location{font-size:12px!important;margin:0!important;color:#4b6380!important}
+.background-section .background-org{font-size:12.5px!important;color:#486583!important}
+.background-section .background-description{font-size:12.5px!important;color:#334b65!important;margin:9px 0 0!important}
+.background-section .background-facts{margin:11px 0 0!important;padding:9px 0 0!important;border-color:#e4edf4!important}
+.background-section .background-facts p{font-size:12.5px!important;line-height:1.7!important}
+/* Honors one line per award; services same typographic rhythm. */
+.honors-section .honors-list,.services-section .services-list{max-width:none!important}
+.honors-section .plain-academic-item,.services-section .plain-academic-item{padding:16px 0!important;border-bottom:1px solid #e1e9f0!important;min-height:0!important}
+.honors-section .plain-item-content{display:grid!important;grid-template-columns:64px max-content minmax(0,1fr)!important;gap:17px!important;align-items:baseline!important}
+.honors-section .plain-item-content .honor-year{margin:0!important;padding:0!important;min-width:0!important;font-size:13px!important;line-height:1.6!important;color:#215d96!important}
+.honors-section .plain-item-content .uniform-card-title,.services-section .plain-item-content .uniform-card-title{font-family:Arial,sans-serif!important;display:block!important;margin:0!important;font-size:13.8px!important;font-weight:700!important;line-height:1.65!important;color:#193a5c!important}
+.honors-section .honor-inline-detail{min-width:0!important;font-size:12.5px!important;line-height:1.65!important;color:#3f5c79!important}
+.services-section .plain-academic-item{padding:15px 0!important}
+@media(max-width:780px){
+ .background-section .academic-timeline-row{grid-template-columns:1fr!important;gap:10px!important;padding:22px 0 22px 20px!important;border-left:1px solid var(--academic-line)!important}
+ .background-section .academic-timeline-row:before{display:none!important}
+ .background-section .academic-timeline-row:after{top:25px!important;left:-6px!important}
+ .background-section .academic-period{text-align:left!important;padding:0!important}
+ .background-section .academic-details{padding:0!important}
+ .honors-section .plain-item-content{grid-template-columns:60px minmax(0,1fr)!important;gap:6px 12px!important}
+ .honors-section .honor-inline-detail{grid-column:2!important}
+ .research-section .scholarly-paper.research-item > div:last-child{padding:20px 18px!important}
+ .research-section .scholarly-paper h4{font-size:18px!important}
+}
+
+
+/* October 2026: final hierarchy, inline facts, usable abstract disclosure */
+.section .section-heading h2{font-size:clamp(38px,4vw,48px)!important;line-height:1.15!important;padding-bottom:21px!important;font-weight:700!important}
+.section .section-heading h2:after{width:84px!important;height:4px!important}
+.section .group-header{margin-top:43px!important;margin-bottom:17px!important}
+.section .group-header h3{font-family:Georgia,'Times New Roman',serif!important;font-size:clamp(22px,2.2vw,27px)!important;font-weight:600!important;padding-bottom:10px!important;color:#234e76!important}
+.section .group-header h3:after{width:38px!important;height:2px!important;background:#86a8c6!important}
+.research-section .research-type-label{font-size:10px!important;letter-spacing:.12em!important}
+.research-section .conference-line strong{font-weight:700;color:#244f77}
+.background-section .background-facts p{display:block!important;margin:3px 0!important;padding:0!important;text-indent:0!important;line-height:1.65!important;white-space:normal!important}
+.background-section .background-facts p strong{display:inline!important;width:auto!important;min-width:0!important;margin:0!important;padding:0!important;font-weight:700!important;color:#223e5b!important}
+.background-section .background-facts p span{display:inline!important;width:auto!important;margin:0!important;padding:0!important}
+.background-section .background-facts{border:0!important;padding-top:5px!important}
+.research-section .paper-actions.research-actions{display:flex!important;gap:10px!important;align-items:flex-start!important;flex-wrap:wrap!important;margin-top:18px!important}
+.research-section .research-actions .paper-abstract{margin:0!important;display:block!important}
+.research-section .research-actions .paper-abstract[open]{display:contents!important}
+.research-section .research-actions .paper-abstract summary{display:flex!important;align-items:center!important;justify-content:center!important;min-height:36px!important;cursor:pointer!important;list-style:none!important;padding:8px 14px!important;font-size:12px!important;border:1px solid #abc2d8!important;border-radius:4px!important;background:#f5f9fd!important;color:#164b7c!important;box-sizing:border-box!important}
+.research-section .research-actions .paper-abstract summary::-webkit-details-marker{display:none!important}
+.research-section .research-actions .paper-abstract summary:before{content:'▸';margin-right:7px}
+.research-section .research-actions .paper-abstract[open] summary:before{content:'▾'}
+.research-section .research-actions .paper-abstract .abstract-content{flex:0 0 100%!important;order:3!important;display:block!important;background:#f5f9fd!important;border-left:3px solid #2471ac!important;padding:14px 17px!important;margin-top:3px!important;box-sizing:border-box!important;color:#2b425b!important;font-size:13px!important;line-height:1.8!important}
+.research-section .research-actions .abstract-content p{margin:0 0 6px!important}
+.research-section .research-actions .abstract-content .abstract-hint{font-size:11px!important;font-style:italic;color:#526b83!important;margin:5px 0 0!important}
+.research-section .research-actions .paper-link-button{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:36px!important;padding:8px 14px!important;box-sizing:border-box!important;font-size:12px!important;border:1px solid #abc2d8!important;border-radius:4px!important;background:#fff!important;color:#164b7c!important;font-family:inherit!important;line-height:1.4!important}
+.research-section .research-actions button.paper-link-button:disabled{opacity:.48!important;cursor:not-allowed!important;background:#f2f4f7!important}
+@media(max-width:740px){.section .section-heading h2{font-size:34px!important}.section .group-header h3{font-size:22px!important}}
+
+
+/* October 2026: use exactly the hero-photo blue across all accents */
+:root { --blue:#003896; --blue-dark:#002c78; --academic-blue:var(--blue); }
+.section .section-heading h2:after,.section .group-header h3:after,
+.photo-rule {background:var(--blue)!important;}
+.research-section .scholarly-paper.research-item > div:last-child {border-left-color:var(--blue)!important;}
+.research-section .research-type-label,.research-section .research-actions .paper-abstract summary,
+.research-section .research-actions .paper-link-button {color:var(--blue)!important;}
+.research-section .research-actions .paper-abstract .abstract-content {border-left-color:var(--blue)!important;min-height:38px!important;}
+.research-section .conference-line,.research-section .conference-line strong {font-weight:400!important;color:#35516f!important;}
+.honors-section .honor-inline-detail strong {font-weight:700!important;color:#193a5c!important;}
+.services-section .plain-item-content {display:grid!important;grid-template-columns:64px minmax(0,1fr)!important;gap:17px!important;align-items:baseline!important;}
+.services-section .service-year {font-size:13px!important;font-weight:700!important;color:var(--blue)!important;}
+@media(max-width:780px){.services-section .plain-item-content{grid-template-columns:60px minmax(0,1fr)!important;gap:12px!important;}}
